@@ -7,11 +7,3 @@ The package contains a set of functions aimed at loading and visualizing data fr
 National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is
 a nationwide census providing the American public yearly data regarding fatal injuries suffered
 in motor vehicle traffic crashes.
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-## basic example code
-```
