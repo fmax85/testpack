@@ -69,6 +69,6 @@ data(fars.test.df)
 Data frame generated from the 2013 dataset
 }
 \examples{
-data(ars.test.df)
+data(fars.test.df)
 }
 \keyword{datasets}
