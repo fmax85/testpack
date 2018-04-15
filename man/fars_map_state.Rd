@@ -20,6 +20,8 @@ occurred in the desired year. Data with non-consistent geographical values are
 filtered out. An error is raised if a inexistent state number is entered
 }
 \examples{
-fars_map_state(13, 2015)
+\donttest{
+  fars_map_state(13, 2015)
+}
 
 }

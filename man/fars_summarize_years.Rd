@@ -19,6 +19,8 @@ crashes, grouped by month, for any valid year provided in the \code{years}
 input parameter. An error is generated if no valid year is entered
 }
 \examples{
-fars_summarize_years( c(2013, 2018) )
+\donttest{
+  fars_summarize_years( c(2013, 2018) )
+}
 
 }

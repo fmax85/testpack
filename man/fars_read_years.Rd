@@ -25,6 +25,8 @@ Data files to be loaded must be placed in the same directory of this
    R script!
 }
 \examples{
-fars_read_years( c(2013, 2014) )
+\donttest{
+  fars_read_years( c(2013, 2014) )
+}
 
 }
