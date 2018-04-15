@@ -125,7 +125,9 @@ fars_summarize_years <- function(years) {
 #' @return NULL. An error is raised if an inexistent state number is entered
 #'
 #' @examples
-#' fars_map_state(13, 2015)
+#' \donttest{
+#'   fars_map_state(13, 2015)
+#' }
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
