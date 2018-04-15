@@ -11,7 +11,9 @@
 #' @return A tbl_df object if the input file exists
 #'
 #' @examples
-#' fars_read("data/accident_2014.csv.bz2")
+#' \donttest{
+#'   fars_read("data/accident_2014.csv.bz2")
+#' }
 #'
 #' @export
 fars_read <- function(filename) {
@@ -62,7 +64,9 @@ make_filename <- function(year) {
 #'    as input, if the corresponding files exist; NULL otherwise
 #'
 #' @examples
-#' fars_read_years( c(2013, 2014) )
+#' \donttest{
+#'   fars_read_years( c(2013, 2014) )
+#' }
 #'
 #' @note Data files to be loaded must be placed in the same directory of this
 #'    R script!
@@ -97,7 +101,9 @@ fars_read_years <- function(years) {
 #' @return A table object (of 'tbl_df' type) containing the data summary
 #'
 #' @examples
-#' fars_summarize_years( c(2013, 2018) )
+#' \donttest{
+#'   fars_summarize_years( c(2013, 2018) )
+#' }
 #'
 #' @export
 fars_summarize_years <- function(years) {
