@@ -65,5 +65,5 @@
 #' }
 #'
 #' @examples
-#' data(ars.test.df)
+#' data(fars.test.df)
 "fars.test.df"
