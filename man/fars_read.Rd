@@ -18,6 +18,8 @@ by the \code{filename} input parameter. An error is raised if the file name
 provided does not exist
 }
 \examples{
-fars_read("data/accident_2014.csv.bz2")
+\donttest{
+  fars_read("data/accident_2014.csv.bz2")
+}
 
 }
