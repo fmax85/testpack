@@ -1,0 +1,75 @@
+---
+title: "testpack description"
+author: "F. Max"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{testpack description}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+    library(testpack),
+    collapse = TRUE,
+    comment = "#>"
+)
+df <- fars.test.df
+```
+
+`testpack` is meant for loading and visualizing data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System. The following functions are contained:
+
+- **`make_filename`** generates a string according to the format of FARS dataset file names, mainly adopted for internal use
+- **`fars_read`** loads a full dataset from file. An appropriate file name must be provided in input
+- **`fars_read_years`** loads the `MONTH` and `year` columns of all the accidents occurred in the years provided in input
+- **`fars_summarize_years`** produces a data frame summarizing the number of accidents per month for each year provided in input
+- **`fars_map_state`** draws a map with marks representing the geographic locations of the occurrence of the accidents, for the year and the state provided in input
+
+## `testpack` at work
+
+**`make_filename`** is internally used to generate appropriate FARS data file names. Appropriate input is expected in order to generate meaningful file names.
+```{r}
+make_filename(2013)
+make_filename("2015")
+make_filename(3.14159)
+```
+***
+**`fars_read`** loads a full dataset from an appropirate FARS file.
+
+```{r, eval=FALSE}
+df <- fars_read(2018)
+```
+
+The data frame should look like this:
+```{r}
+head(df, 7)
+```
+
+***
+**`fars_read_years`** loads the `MONTH` and `year` columns of all the accidents occurred in the years provided in input
+
+```{r, eval=FALSE}
+df <- fars_read(2018)
+```
+
+The data frame should look like this:
+```{r echo=FALSE}
+df1 <- dplyr::select(df, MONTH, YEAR)
+```
+```{r}
+head(df1, 9)
+```
+***
+**`fars_summarize_years`** produces a data frame summarizing the number of accidents per month for each year provided in input
+
+```{r, eval=FALSE}
+df <- fars_read_years( c(2013, 2018) )
+```
+
+***
+**`fars_map_state`** draws a map with marks representing the geographic locations of the occurrence of the accidents, for the year and the state provided in input
+
+## Additional info
+
+Check out also the the help of the functions for additional details. The package comes along with a data frame `fars.data.df`, obtained randomly sampling 1,000 entries of the FARS data of year 2013.
