@@ -1,3 +1,4 @@
+utils::suppressForeignCheck(c("MONTH", "STATE", "n", "year"))
 #' Data file loader
 #'
 #' It creates a data file object of 'tbl_df' type from the file that is given
